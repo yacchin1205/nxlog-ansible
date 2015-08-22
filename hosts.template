@@ -2,8 +2,8 @@
 <target host>
 
 [windows:vars]
-ansible_ssh_user=<username of target host>
-ansible_ssh_pass=<password of target host>
+ansible_ssh_user=<username for target host>
+ansible_ssh_pass=<password for target host>
 ansible_ssh_port=5986
 ansible_connection=winrm
 syslog_host=<syslog host>
