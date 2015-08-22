@@ -1,8 +1,8 @@
 - name: Download NXLog
-  win_get_url: url=http://nxlog.org/system/files/products/files/1/nxlog-ce-2.9.1347.msi dest=C:\Users\azureuser\Downloads\nxlog-ce.msi
+  win_get_url: url=http://nxlog.org/system/files/products/files/1/nxlog-ce-2.9.1347.msi dest="C:\Users\{{ ansible_ssh_user }}\Downloads\nxlog-ce.msi"
 
 - name: Install NXLog
-  win_msi: path=C:\Users\azureuser\Downloads\nxlog-ce.msi
+  win_msi: path="C:\Users\{{ ansible_ssh_user }}\Downloads\nxlog-ce.msi"
 
 - name: Copy configuration for NXLog
   win_template: src=nxlog.conf.j2 dest="C:\Program Files (x86)\nxlog\conf\nxlog.conf"
