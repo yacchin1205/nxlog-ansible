@@ -6,6 +6,7 @@
 
 - name: Copy configuration for NXLog
   win_template: src=nxlog.conf.j2 dest="C:\Program Files (x86)\nxlog\conf\nxlog.conf"
+  notify: Restart NXLog
 
 - name: Start NXLog
   win_service: name=nxlog start_mode=auto state=started
